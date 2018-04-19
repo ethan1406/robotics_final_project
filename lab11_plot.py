@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import math
 
 import lab11_image
-#kldajlfnajl
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("image", help="vector image file to plot (YAML)")
@@ -38,6 +38,11 @@ if __name__ == "__main__":
     # draw lines
     for line in img.lines:
         plt.plot([line.u[0], line.v[0]], [line.u[1], line.v[1]], line.color)
+        print("[{},{},{},{},{}]".format(line.u[0], line.u[1], line.v[0], line.v[1], line.color))
+    # i = 7
+    # plt.plot([img.lines[i].u[0], img.lines[i].v[0]], [img.lines[i].u[1], img.lines[i].v[1]], img.lines[i].color)
+    # print("[{},{},{},{}]".format(img.lines[i].u[0], img.lines[i].v[0], img.lines[i].u[1], img.lines[i].v[1]))
+
 
     # show the output
     plt.show()
